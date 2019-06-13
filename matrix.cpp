@@ -4,12 +4,14 @@
 #include <sys/time.h>
 #include <stdlib.h>
 #include <iostream>
+#include <thread>
 
 #define mA 4
 #define nA 2
 #define mB 2
 #define nB 5
-#define num_threads 2
+
+int num_threads = std::thread::hardware_concurrency();
 
 int **A;
 int **B;
